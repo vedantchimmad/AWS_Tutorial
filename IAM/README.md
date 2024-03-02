@@ -45,3 +45,8 @@
 >You want to protect your Root Accounts and IAM users add MFA(password + MFA)
 ### HOW IAM Works
 ![How IAM Works](../Image/IAM_Works.png)
+
+### STS
+Security Token Service
+* Which will allow to EC2 to access the S3 bucket
+![STS](../Image/STS.png)
