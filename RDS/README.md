@@ -75,7 +75,17 @@
 * Fail-over in case of loss of AZ, loss of network, instance or storage failure
 ### RDS security
 ![RDS Security](../Image/RDS_Security.png)
+* Encryption at rest can be enabled –includes DB storage, backups, read replicas and snapshots
+* You can only enable encryption for an Amazon RDS DB instance when you create it, not after the DB instance is created
+* DB instances that are encrypted can't be modified to disable encryption
+* Uses AES 256 encryption and encryption is transparent with minimal performance impact
+* RDS for Oracle and SQL Server is also supported using Transparent Data Encryption (TDE) (may have performance impact)
+* AWS KMS is used for managing encryption keys
+* The same KMS key is used if in the same Region as the primary
+* If the read replica is in a different Region, a different KMS key is used
+* You can't restore an unencrypted backup or snapshot to an encrypted DB instance
 ## AWS Aurora
+![RDS Aurora](../Image/RDS_Aurora.png)
 * Aurora is a proprietary technology from AWS (not open sourced)
 * Postgres and MySQL are both supported as Aurora DB (that means your drivers will work as if Aurora was a Postgres or MySQL database)
 * Aurora is “AWS cloud optimized” and claims 5x performance improvement over MySQL on RDS, over 3x the performance of Postgres on RDS
@@ -85,3 +95,15 @@
 * Aurora costs more than RDS (20% more) – but is more efficient
 * One Aurora Instance takes writes (master)
 * Support for Cross Region Replication
+### Features of Aurora
+* Automatic fail-over
+* Backup and Recovery
+* Isolation and security
+* Industry compliance
+* Push-button scaling 
+* Automated Patching with Zero Downtime
+* Advanced Monitoring
+* Routine Maintenance
+* Backtrack: restore data at any point of time without using backups
+### Aurora vs SQl
+![Aurora vs SQl](../Image/Aurora_vs_SQL.png)
