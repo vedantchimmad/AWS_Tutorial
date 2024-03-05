@@ -3,7 +3,7 @@
 ---
 ## AWS ElastiCache
 ![AWS ElastiCache](../Image/ElastiCache.png)
-* Fully managed implementations Redisand Memcached
+* Fully managed implementations Redis and Memcached
 * ElastiCache is a key/value store
 * In-memory database offering high performance and low latency
 * Can be put in front of databases such as RDS and DynamoDB
