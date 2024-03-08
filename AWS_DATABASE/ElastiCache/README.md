@@ -87,43 +87,54 @@
   * resharding = change the number of shards as needed
   * shard rebalancing = ensure that data is equally distributed across shards
   * two modes – offline (with downtime) and online (no downtime)
-### Engine difference
-![Elastichache Engine difference](../Image/Elasticache_engine.png)
-|Cluster Mode Disabled|Cluster Mode Enabled| 
- |-|-|
 
-Cluster Mode Disabled
-• 1 shard
-• 0-5 replicas
-• If 0 replicas, primary failure = total
-data loss
-• Multi-AZ supported
-• Supports scaling
-• If primary load is read-heavy, you
-can scale the cluster (though up to 5
-replicas max)
-Cluster Mode Enabled
-• Up to 90 shards
-• 0-5 replicas per shard
-• If 0 replicas, primary failure = total
-data loss in that shard
-• Multi-AZ required
-• Supports partitioning
-• Good for write-heavy nodes (you
-get additional write endpoints, one
-per shard)
-**Memcached**
-![ElastiCache Memcached](../Image/ElastiCache_Memcached.png)
-* Add nodes to a cluster
-* Scale vertically (node type) –must create a new cluster manually
-  **Redis**
-* **Cluster mode disabled:**
-  ![Cluster mode disabled](../Image/ElastiCache_Redis_disabled.png)
-* Add replica or change node type –creates a new cluster and migrates data
-* **Cluster mode enabled:**
-  ![Cluster mode enabled](../Image/ElastiCache_Redis_enabled.png)
-* Online reshardingto add or remove shards; vertical scaling to change node type
-* Offline reshardingto add or remove shards change node type or upgrade engine (more flexible than online)
+| Cluster Mode Disabled                                                                  | Cluster Mode Enabled                                                           | 
+|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| 1 shard                                                                                | Up to 90 shards                                                                |
+| 0-5 replicas                                                                           | 0-5 replicas per shard                                                         |
+| If 0 replicas, primary failure = total data loss                                       | If 0 replicas, primary failure = total data loss in that shard                 |
+| Multi-AZ supported                                                                     | Multi-AZ required                                                              |
+| Supports scaling                                                                       | Supports partitioning                                                          |
+| If primary load is read-heavy, you can scale the cluster (though up to 5 replicas max) | Good for write-heavy nodes (you get additional write endpoints, one per shard) |
+## Memcached 
+### Overview
+* Simple in-memory key-value store with sub-millisecond latency
+* Automatic detection and recovery from cache node failures
+* Typical applications
+* Session store (persistent as well as transient session data store)
+* DB query results caching (relational or NoSQL DBs – RDS / DynamoDB etc.)
+* Webpage caching
+* API caching
+* Object caching (images / files / metadata)
+* Well suited for web / mobile apps, gaming, IoT, ad-tech, and ecommerce
+### Architecture
+![Memcached Architecture](../Image/Memcacged_architecture.png)
+* Memcached cluster is generally placed in private subnet
+* Accessed from EC2 instance placed in a public subnet in a VPC
+* Allows access only from EC2 network (apps should be hosted on whitelisted EC2 instances)
+* Whitelist using security groups
+* Up to 20 nodes per cluster
+* Data is distributed across the available nodes
+* Replicas are not supported
+* Node failure = data loss
+* Nodes can be deployed as Multi-AZ (to reduce data loss)
+### Scaling
+* Vertical scaling not supported
+  * can resize by creating a new cluster and migrating your application
+* Horizontal scaling
+  * allows you to partition your data across multiple nodes
+  * up to 20 nodes per cluster and 100 nodes per region (soft limit)
+  * no need to change endpoints post scaling(if you use auto-discovery)
+  * must re-map at least some of your keyspace post scaling (evenly spread cache keys across all nodes)
+## ElastiCache Security 
+* Memcached does not support encryption
+* Encryption at rest for Redis (using KMS)
+* Encryption in-transit for Redis (using TLS / SSL)
+  * Between server and client
+  * Is an optional feature
+  * Can have some performance impact
+  * Supports encrypted replication
+* Redis snapshots in S3 use S3’s encryption capabilities
 ### ElastiCache Use Cases
 * Data that is relatively staticand frequently accessed
 * Applications that are tolerant of stale data
