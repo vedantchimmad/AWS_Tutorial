@@ -212,7 +212,7 @@ Ex : RDS, ElastiCache are services that can scale vertically.
 * They enable the load balancer to know if instances it forwards traffic to are available to reply to requests
 * The health check is done on a port and a route (/health is common)
 * If the response is not 200 (OK), then the instance is unhealthy
-###Sticky session
+### Sticky session
 * It is possible to implement stickiness so that the same client is always redirected to the same instance behind a load balancer
 * This works for Classic Load Balancer, Application Load Balancer, and Network Load Balancer
 * For both CLB & ALB, the “cookie” used for stickiness has an expiration date you control
@@ -235,6 +235,7 @@ Ex : RDS, ElastiCache are services that can scale vertically.
 * Between 1 and 3600 seconds (default: 300 seconds)
 ### Cross-zone load balancing
 1. With Cross zone load balancing
+
 ![With Cross](../Image/Cross_zone_loadbalancing.png)
    * each load balancer instance distributes evenly across all registered instances in all AZ
    * Enabled by default (can be disabled at the Target Group level) for ALB
@@ -243,6 +244,7 @@ Ex : RDS, ElastiCache are services that can scale vertically.
    * You pay charges ($) for inter AZ data if enabled to NLB and GLB
 
 2. Without cross zone load balancing
+
 ![Without cross zone](../Image/Without_crosszone_loadbalancing.png)
    * Requests are distributed in the instances of the node of the Elastic Load Balancer
 ### SSL/TLS
