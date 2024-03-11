@@ -87,3 +87,41 @@
 6. Glacier Deep Archive
    * Standard (12 hours), Bulk (48 hours)
    * Minimum storage duration of 180 days
+### S3 Encryption
+* Encrypting data at rest
+
+1. Sever side encryption(SSE-S3)
+![Sever side encryption](../Image/Sever_side_encryption.png)
+   * Amazon S3-Managed Keys (SSE-S3) –Enabled by Default
+   * Encrypts S3 objects using keys handled, managed, and owned by AWS
+   * Object is encrypted server-side
+   * Encryption type is AES-256
+   * Must set header "x-amz-server-side-encryption": "AES256"
+   * Enabled by default for new buckets & new objects
+2. Server-Side Encryption with KMS Keys(SSE-KMS)
+![Server-Side Encryption KMS](../Image/Server_Side_Encryption_KMS.png) 
+   * Leverage AWS Key Management Service (AWS KMS) to manage encryption keys
+   * KMS Keys stored in AWS KMS (SSE-KMS)
+   * Encryption using keys handled and managed by AWS KMS (Key Management Service)
+   * KMS advantages: user control + audit key usage using CloudTrail
+   * Object is encrypted server side
+   * Must set header "x-amz-server-side-encryption": "aws:kms"
+   #### Limitations
+   * If you use SSE-KMS, you may be impacted by the KMS limits
+   * When you upload, it calls the GenerateDataKeyKMS API
+   * When you download, it calls the Decrypt KMS API
+   * Count towards the KMS quota per second (5500, 10000, 30000 req/s based on region)
+   * You can request a quota increase using the Service Quotas Console
+3. Server side encryption with customer provided key(SSE-C)
+![Server side encryption coustomer](../Image/Server_side_encryption_coustomer.png)
+   * When you want to manage your own encryption keys
+   * Server-Side Encryption using keys fully managed by the customer outside of AWS
+   * Amazon S3 does NOT store the encryption key you provide
+   * HTTPS must be used
+   * Encryption key must provided in HTTP headers, for every HTTP request made
+4. Client side encryption
+![Client side encryption](../Image/Client_side_encryption.png) 
+   * Use client libraries such as Amazon S3 Client-Side Encryption Library
+   * Clients must encrypt data themselves before sending to Amazon S3
+   * Clients must decrypt data themselves when retrieving from Amazon S3
+   * Customer fully manages the keys and encryption cycle
