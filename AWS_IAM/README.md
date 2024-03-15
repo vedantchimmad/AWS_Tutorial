@@ -50,3 +50,8 @@
 Security Token Service
 * Which will allow to EC2 to access the S3 bucket
 ![STS](../Image/STS.png)
+>[!NOTE]
+> 
+> `IAM Credentials report` lists all your account's users and the status of their various credentials. 
+> 
+>The other IAM Security Tool is `IAM Access Advisor`. It shows the service permissions granted to a user and when those services were last accessed.
