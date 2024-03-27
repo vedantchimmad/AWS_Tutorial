@@ -330,6 +330,7 @@ Ex : RDS, ElastiCache are services that can scale vertically.
     * Up to 3GiB/s for reads and 1GiB/s for writes
     * Used for unpredictable workloads
 ### Storage Classes
+![EFS Storage classes](../Image/EFS_storage_classes.png)
 * Storage Tiers (lifecycle management feature – move file after N days)
   * Standard: for frequently accessed files
   * Infrequent access (EFS-IA): cost to retrieve files, lower price to store. Enable EFS-IA with a Lifecycle Policy
@@ -337,3 +338,24 @@ Ex : RDS, ElastiCache are services that can scale vertically.
   * Standard: Multi-AZ, great for prod
   * One Zone: One AZ, great for dev, backup enabled by default, compatible with IA (EFS One Zone-IA)
 * Over 90% in cost savings
+### EBS vs EFS
+#### Elastic Block Storage
+![!EBS vs](../Image/EBS_vs.png)
+* EBS volumes…
+  * one instance (except multi-attach io1/io2)
+  * are locked at the Availability Zone (AZ) level
+  * gp2: IO increases if the disk size increases
+  * gp3 & io1: can increase IO independently
+* To migrate an EBS volume across AZ
+  * Take a snapshot
+  * Restore the snapshot to another AZ
+  * EBS backups use IO and you shouldn’t run them while your application is handling a lot of traffic
+* Root EBS Volumes of instances get terminated by default if the EC2 instance gets terminated. (you can disable that)
+#### Elastic File System
+![EFS vs](../Image/EFS_vs.png)
+* Mounting 100s of instances across AZ
+* EFS share website files (WordPress)
+* Only for Linux Instances (POSIX)
+* EFS has a higher price point than EBS
+* Can leverage EFS-IA for cost savings
+* Remember: EFS vs EBS vs Instance Store Availability Zone 1 EFS
