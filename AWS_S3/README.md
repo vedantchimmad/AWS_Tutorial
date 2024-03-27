@@ -125,3 +125,18 @@
    * Clients must encrypt data themselves before sending to Amazon S3
    * Clients must decrypt data themselves when retrieving from Amazon S3
    * Customer fully manages the keys and encryption cycle
+### Lifecycle Rules
+![S3 Life cycle rules](../Image/S3_Lifecyclerules.png)
+* You can transition objects between storage classes
+* For infrequently accessed object, move them to Standard IA
+* For archive objects that you don’t need fast access to, move them to Glacier or Glacier Deep Archive
+* Moving objects can be automated using a Lifecycle Rules
+* Transition Actions – configure objects to transition to another storage class
+  * Move objects to Standard IA class 60 days after creation
+  * Move to Glacier for archiving after 6 months
+* Expiration actions – configure objects to expire (delete) after some time
+  * Access log files can be set to delete after a 365 days
+  * Can be used to delete old versions of files (if versioning is enabled)
+  * Can be used to delete incomplete Multi-Part uploads
+* Rules can be created for a certain prefix (example: s3://mybucket/mp3/*)
+* Rules can be created for certain objects Tags (example: Department: Finance
