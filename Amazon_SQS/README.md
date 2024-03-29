@@ -79,3 +79,7 @@
 * Ability to add more SQS subscribers over time
 * Make sure your SQS queue access policy allows for SNS to write
 * Cross-Region Delivery: works with SQS Queues in other regions
+### SNS – Message Filtering
+![SNS Message Filtering](../Image/SNS_message_filtering.png)
+* JSON policy used to filter messages sent to SNS topic’s subscriptions
+* If a subscription doesn’t have a filter policy, it receives every message
