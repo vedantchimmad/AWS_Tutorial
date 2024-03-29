@@ -79,7 +79,3 @@
 * Ability to add more SQS subscribers over time
 * Make sure your SQS queue access policy allows for SNS to write
 * Cross-Region Delivery: works with SQS Queues in other regions
-### Application: S3 Events to multiple queues
-![S3 Events to multiple queues](../Image/S3_event_to_SQS.png)
-* For the same combination of: event type (e.g. object create) and prefix(e.g. images/) you can only have one S3 Event rule
-* If you want to send the same S3 event to many SQS queues, use fan-out
