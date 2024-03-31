@@ -17,4 +17,7 @@
 * Multi-factor authentication (MFA)
 * Federated Identities: users from Facebook, Google, SAML…
 ### Cognito User Pools (CUP) - Integrations
-* CUP integrates with API Gateway and Application Load Balancer
+* CUP integrates with API Gateway
+  ![Cognito API](../Image/Cognito_API.png)
+* CUP integrates with Application Load Balancer
+![Cognito ALB](../Image/Cognito_ALB.png)
