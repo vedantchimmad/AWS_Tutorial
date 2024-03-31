@@ -21,3 +21,11 @@
   ![Cognito API](../Image/Cognito_API.png)
 * CUP integrates with Application Load Balancer
 ![Cognito ALB](../Image/Cognito_ALB.png)
+### Cognito Identity Pools (Federated Identities)
+![Cognito Identity Pools](../Image/Cognito_Identity_Pools.png)
+* Get identities for “users” so they obtain temporary AWS credentials
+* Users source can be Cognito User Pools, 3rd party logins, etc…
+* Users can then access AWS services directly or through API Gateway
+* The IAM policies applied to the credentials are defined in Cognito
+* They can be customized based on the user_id for fine grained control
+* Default IAM roles for authenticated and guest users
