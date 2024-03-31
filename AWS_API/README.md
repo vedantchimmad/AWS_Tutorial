@@ -35,3 +35,12 @@
 * Private:
   * Can only be accessed from your VPC using an interface VPC endpoint (ENI)
   * Use a resource policy to define access
+### API Gateway – Security
+* User Authentication through
+  * IAM Roles (useful for internal applications)
+  * Cognito (identity for external users – example mobile users)
+  * Custom Authorizer (your own logic)
+* Custom Domain Name HTTPS security through integration with AWS Certificate Manager (ACM)
+  * If using Edge-Optimized endpoint, then the certificate must be in us-east-1
+  * If using Regional endpoint, the certificate must be in the API Gateway region
+  * Must setup CNAME or A-alias record in Route 53
