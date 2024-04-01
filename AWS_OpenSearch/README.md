@@ -14,3 +14,5 @@
 ![OpenSearch patterns DynamoDB](../Image/OpenSearch_DynamoDB.png)
 ### OpenSearch patterns CloudWatch Logs
 ![OpenSearch patterns CloudWatch Logs](../Image/OpenSearch_Cloudwatch.png)
+### OpenSearch patterns Kinesis Data Streams & Kinesis Data Firehose
+![OpenSearch patterns Kinesis Data Streams & Kinesis Data Firehose](../Image/OpenSearch_Kinesis.png)
