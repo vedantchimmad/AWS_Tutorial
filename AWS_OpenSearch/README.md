@@ -10,3 +10,7 @@
 * Ingestion from Kinesis Data Firehose, AWS IoT, and CloudWatch Logs
 * Security through Cognito & IAM, KMS encryption, TLS
 * Comes with OpenSearch Dashboards (visualization)
+### OpenSearch patterns DynamoDB
+![OpenSearch patterns DynamoDB](../Image/OpenSearch_DynamoDB.png)
+### OpenSearch patterns CloudWatch Logs
+![OpenSearch patterns CloudWatch Logs]()
