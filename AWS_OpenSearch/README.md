@@ -13,4 +13,4 @@
 ### OpenSearch patterns DynamoDB
 ![OpenSearch patterns DynamoDB](../Image/OpenSearch_DynamoDB.png)
 ### OpenSearch patterns CloudWatch Logs
-![OpenSearch patterns CloudWatch Logs]()
+![OpenSearch patterns CloudWatch Logs](../Image/OpenSearch_Cloudwatch.png)
