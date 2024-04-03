@@ -60,6 +60,7 @@
 * Reduce forecasting time from months to hours
 * Use cases: Product Demand Planning, Financial Planning, Resource Planning, …
 ## Amazon Kendra
+![Kendra](../Image/Kendra.png)
 * Fully managed document search service powered by Machine Learning
 * Extract answers from within a document (text, pdf, HTML, PowerPoint, MS Word, FAQs…)
 * Natural language search capabilities
