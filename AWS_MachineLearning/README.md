@@ -75,7 +75,7 @@
 * Implement in days, not months (you don’t need to build, train, and deploy ML solutions)
 * Use cases: retail stores, media and entertainment…
 ## Amazon Textract
-![Textract]
+![Textract](../Image/Textract.png)
 * Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
 * Extract data from forms and tables
 * Read and process any type of document (PDFs, images, …)
