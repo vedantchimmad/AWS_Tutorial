@@ -53,8 +53,15 @@
 * Typically, difficult to do all the processes in one place + provision servers
 * Machine learning process (simplified): predicting your exam score
 ## Amazon Forecast
+![Amazon Forecast](../Image/Forecost.png)
 * Fully managed service that uses ML to deliver highly accurate forecasts
 * Example: predict the future sales of a raincoat
 * 50% more accurate than looking at the data itself
 * Reduce forecasting time from months to hours
 * Use cases: Product Demand Planning, Financial Planning, Resource Planning, …
+## Amazon Kendra
+* Fully managed document search service powered by Machine Learning
+* Extract answers from within a document (text, pdf, HTML, PowerPoint, MS Word, FAQs…)
+* Natural language search capabilities
+* Learn from user interactions/feedback to promote preferred results (Incremental Learning)
+* Ability to manually fine-tune search results (importance of data, freshness, custom, …)
