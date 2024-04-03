@@ -20,7 +20,7 @@
 * Set a Minimum Confidence Threshold for items that will be flagged
 * Flag sensitive content for manual review in Amazon Augmented AI (A2I)
 * Help comply with regulations
-### Amazon Transcribe
+## Amazon Transcribe
 * Automatically convert speech to text
 * Uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately
 * Automatically remove Personally Identifiable Information (PII) using Redaction
@@ -29,3 +29,6 @@
   * transcribe customer service calls
   * automate closed captioning and subtitling
   * generate metadata for media assets to create a fully searchable archive
+## Amazon Polly
+* Turn text into lifelike speech using deep learning
+* Allowing you to create applications that talk
