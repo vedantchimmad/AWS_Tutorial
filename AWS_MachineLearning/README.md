@@ -48,6 +48,13 @@
   * analyze customer interactions (emails) to find what leads to a positive or negative experience
   * Create and groups articles by topics that Comprehend will uncover
 ## Amazon SageMaker
+![Amazon SageMaker](../Image/AWS_SageMaker.png)
 * Fully managed service for developers / data scientists to build ML models
 * Typically, difficult to do all the processes in one place + provision servers
 * Machine learning process (simplified): predicting your exam score
+## Amazon Forecast
+* Fully managed service that uses ML to deliver highly accurate forecasts
+* Example: predict the future sales of a raincoat
+* 50% more accurate than looking at the data itself
+* Reduce forecasting time from months to hours
+* Use cases: Product Demand Planning, Financial Planning, Resource Planning, …
