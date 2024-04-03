@@ -64,7 +64,7 @@
   * Real-time dashboards
   * Real-time metrics
 ### Kinesis Data Analytics for Apache Flink
-![Kinesis data Analytics using apache Flink](../Image/Apach)
+![Kinesis data Analytics using apache Flink](../Image/Kinessis_analytics_apache_flink.png)
 * Use Flink (Java, Scala or SQL) to process and analyze streaming data
 * Run any Apache Flink application on a managed cluster on AWS
   * provisioning compute resources, parallel computation, automatic scaling
