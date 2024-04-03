@@ -74,3 +74,12 @@
 * Integrates into existing websites, applications, SMS, email marketing systems, …
 * Implement in days, not months (you don’t need to build, train, and deploy ML solutions)
 * Use cases: retail stores, media and entertainment…
+## Amazon Textract
+![Textract]
+* Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
+* Extract data from forms and tables
+* Read and process any type of document (PDFs, images, …)
+* Use cases:
+  * Financial Services (e.g., invoices, financial reports)
+  * Healthcare (e.g., medical records, insurance claims)
+  * Public Sector (e.g., tax forms, ID documents, passports)
