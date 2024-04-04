@@ -53,7 +53,7 @@
 * The API call is CreateExportTask
 * Not near-real time or real-time… use Logs Subscriptions instead
 ### CloudWatch Logs Subscriptions
-
+![CloudWatch Logs Subscriptions](../Image/CloudWatch_Log_Subscriptions.png)
 * Get a real-time log events from CloudWatch Logs for processing and analysis
 * Send to Kinesis Data Streams, Kinesis Data Firehose, or Lambda
 * Subscription Filter – filter which logs are events delivered to your destination
