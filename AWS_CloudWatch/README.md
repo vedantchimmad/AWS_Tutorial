@@ -83,3 +83,13 @@
 * Processes (total, dead, bloqued, idle, running, sleep)
 * Swap Space (free, used, used %)
 * Reminder: out-of-the box metrics for EC2 – disk, CPU, network (high level)
+## CloudWatch Alarms
+* Alarms are used to trigger notifications for any metric
+* Various options (sampling, %, max, min, etc…)
+* Alarm States:
+  * OK
+  * INSUFFICIENT_DATA
+  * ALARM
+* Period:
+  * Length of time in seconds to evaluate the metric
+  * High resolution custom metrics: 10 sec, 30 sec or multiples of 60 sec
