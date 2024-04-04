@@ -107,3 +107,5 @@
 ![CloudWatch Alarm: good to know](../Image/CloudWatch_Alaram.png)
 * Alarms can be created based on CloudWatch Logs Metrics Filters
 * To test alarms and notifications, set the alarm state to Alarm using CLI aws cloudwatch set-alarm-state --alarm-name "myalarm" --state-value ALARM --state-reason "testing purposes"
+### Amazon EventBridge(formerly CloudWatch Events)
+![Amazon EventBridge](../Image/Amazon_EventBridge.png)
