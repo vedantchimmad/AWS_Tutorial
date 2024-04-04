@@ -37,3 +37,14 @@
 * API Gateway
 * CloudTrail based on filter
 * Route53: Log DNS queries
+### CloudWatch Logs Insights
+![CloudWatch Logs Insights](../Image/CloudWatch_Log_Insights.png)
+* Search and analyze log data stored in CloudWatch Logs
+* Example: find a specific IP inside a log, count occurrences of “ERROR” in your logs…
+* Provides a purpose-built query language
+  * Automatically discovers fields from AWS services and JSON log events
+  * Fetch desired event fields, filter based on conditions, calculate aggregate statistics, sort events, limit number of events…
+  * Can save queries and add them to CloudWatch Dashboards
+* Can query multiple Log Groups in different AWS accounts
+* It’s a query engine, not a real-time engine
+
