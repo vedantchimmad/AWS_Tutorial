@@ -47,6 +47,14 @@
   * Can save queries and add them to CloudWatch Dashboards
 * Can query multiple Log Groups in different AWS accounts
 * It’s a query engine, not a real-time engine
+### CloudWatch Container Insights
+* Collect, aggregate, summarize metrics and logs from containers
+* Available for containers on…
+* Amazon Elastic Container Service (Amazon ECS)
+* Amazon Elastic Kubernetes Services (Amazon EKS)
+* Kubernetes platforms on EC2
+* Fargate (both for ECS and EKS)
+* In Amazon EKS and Kubernetes, CloudWatch Insights is using a containerized version of the CloudWatch Agent to discover containers
 ### CloudWatch Logs – S3 Export
 ![CloudWatch Logs – S3 Export](../Image/CloudWatch_Log_S3.png)
 * Log data can take up to 12 hours to become available for export
@@ -121,7 +129,7 @@
 * The Schema Registry allows you to generate code for your application, that will know in advance how data is structured in the event bus
 * Schema can be versioned
 ### Amazon EventBridge – Resource-based Policy
-![]
+![Amazon EventBridge – Resource-based Policy](../Image/EvenetBridge_Resource_based_policy.png)
 * Manage permissions for a specific Event Bus
 * Example: allow/deny events from another AWS account or AWS region
 * Use case: aggregate all events from your AWS Organization in a single AWS account or AWS region
