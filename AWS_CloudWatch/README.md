@@ -57,10 +57,20 @@
 * Fargate (both for ECS and EKS)
 * In Amazon EKS and Kubernetes, CloudWatch Insights is using a containerized version of the CloudWatch Agent to discover containers
 ### CloudWatch Lambda Insights
+![CloudWatch Lambada Insights](../Image/CloudWatch_Insight_lamdada.png)
 * Monitoring and troubleshooting solution for serverless applications running on AWS Lambda
 * Collects, aggregates, and summarizes system-level metrics including CPU time, memory, disk, and network
 * Collects, aggregates, and summarizes diagnostic information such as cold starts and Lambda worker shutdowns
 * Lambda Insights is provided as a Lambda Layer
+### CloudWatch Contributor Insights
+* Analyze log data and create time series that display contributor data.
+  * See metrics about the top-N contributors
+  * The total number of unique contributors, and their usage.
+* This helps you find top talkers and understand who or what is impacting system performance.
+* Works for any AWS-generated logs (VPC, DNS, etc..)
+* For example, you can find bad hosts, identify the heaviest network users, or find the URLs that generate the most errors.
+* You can build your rules from scratch, or you can also use sample rules that AWS has created – leverages your CloudWatch Logs
+* CloudWatch also provides built-in rules that you can use to analyze metrics from other AWS services.
 ### CloudWatch Logs – S3 Export
 ![CloudWatch Logs – S3 Export](../Image/CloudWatch_Log_S3.png)
 * Log data can take up to 12 hours to become available for export
