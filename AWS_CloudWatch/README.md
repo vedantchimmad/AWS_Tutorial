@@ -79,6 +79,16 @@
 * Powered by SageMaker
 * Enhanced visibility into your application health to reduce the time it will take you to troubleshoot and repair your applications
 * Findings and alerts are sent to Amazon EventBridge and SSM OpsCenter
+### CloudWatch Insights and Operational Visibility
+* CloudWatch Container Insights
+  * ECS, EKS, Kubernetes on EC2, Fargate, needs agent for Kubernetes
+  * Metrics and logs
+* CloudWatch Lambda Insights
+  * Detailed metrics to troubleshoot serverless applications
+* CloudWatch Contributors Insights
+  * Find “Top-N” Contributors through CloudWatch Logs
+* CloudWatch Application Insights
+  * Automatic dashboard to troubleshoot your application and related AWS services
 ### CloudWatch Logs – S3 Export
 ![CloudWatch Logs – S3 Export](../Image/CloudWatch_Log_S3.png)
 * Log data can take up to 12 hours to become available for export
