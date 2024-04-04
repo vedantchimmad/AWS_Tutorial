@@ -56,6 +56,11 @@
 * Kubernetes platforms on EC2
 * Fargate (both for ECS and EKS)
 * In Amazon EKS and Kubernetes, CloudWatch Insights is using a containerized version of the CloudWatch Agent to discover containers
+### CloudWatch Lambda Insights
+* Monitoring and troubleshooting solution for serverless applications running on AWS Lambda
+* Collects, aggregates, and summarizes system-level metrics including CPU time, memory, disk, and network
+* Collects, aggregates, and summarizes diagnostic information such as cold starts and Lambda worker shutdowns
+* Lambda Insights is provided as a Lambda Layer
 ### CloudWatch Logs – S3 Export
 ![CloudWatch Logs – S3 Export](../Image/CloudWatch_Log_S3.png)
 * Log data can take up to 12 hours to become available for export
