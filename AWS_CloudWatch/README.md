@@ -98,7 +98,12 @@
 * Trigger Auto Scaling Action
 * Send notification to SNS (from which you can do pretty much anything)
 ### CloudWatch Alarms – Composite Alarms
+![CloudWatch Alarms](../Image/ClouudWatch_Alarms_composite.png)
 * CloudWatch Alarms are on a single metric
 * Composite Alarms are monitoring the states of multiple other alarms
 * AND and OR conditions
 * Helpful to reduce “alarm noise” by creating complex composite alarms
+### CloudWatch Alarm: good to know
+![CloudWatch Alarm: good to know](../Image/CloudWatch_Alaram.png)
+* Alarms can be created based on CloudWatch Logs Metrics Filters
+* To test alarms and notifications, set the alarm state to Alarm using CLI aws cloudwatch set-alarm-state --alarm-name "myalarm" --state-value ALARM --state-reason "testing purposes"
