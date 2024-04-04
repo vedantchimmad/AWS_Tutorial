@@ -47,4 +47,7 @@
   * Can save queries and add them to CloudWatch Dashboards
 * Can query multiple Log Groups in different AWS accounts
 * It’s a query engine, not a real-time engine
-
+### CloudWatch Logs – S3 Export
+* Log data can take up to 12 hours to become available for export
+* The API call is CreateExportTask
+* Not near-real time or real-time… use Logs Subscriptions instead
