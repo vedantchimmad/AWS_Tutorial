@@ -48,6 +48,7 @@
 * Can query multiple Log Groups in different AWS accounts
 * It’s a query engine, not a real-time engine
 ### CloudWatch Container Insights
+![CloudWatch Container Insights](../Image/CloudWatch_Container_Insights.png)
 * Collect, aggregate, summarize metrics and logs from containers
 * Available for containers on…
 * Amazon Elastic Container Service (Amazon ECS)
