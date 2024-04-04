@@ -48,6 +48,12 @@
 * Can query multiple Log Groups in different AWS accounts
 * It’s a query engine, not a real-time engine
 ### CloudWatch Logs – S3 Export
+![CloudWatch Logs – S3 Export](../Image/CloudWatch_Log_S3.png)
 * Log data can take up to 12 hours to become available for export
 * The API call is CreateExportTask
 * Not near-real time or real-time… use Logs Subscriptions instead
+### CloudWatch Logs Subscriptions
+
+* Get a real-time log events from CloudWatch Logs for processing and analysis
+* Send to Kinesis Data Streams, Kinesis Data Firehose, or Lambda
+* Subscription Filter – filter which logs are events delivered to your destination
