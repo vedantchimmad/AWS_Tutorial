@@ -28,3 +28,12 @@
   * OpenSearch
 * Logs are encrypted by default
 * Can setup KMS-based encryption with your own keys
+### CloudWatch Logs - Sources
+* SDK, CloudWatch Logs Agent, CloudWatch Unified Agent
+* Elastic Beanstalk: collection of logs from application
+* ECS: collection from containers
+* AWS Lambda: collection from function logs
+* VPC Flow Logs: VPC specific logs
+* API Gateway
+* CloudTrail based on filter
+* Route53: Log DNS queries
