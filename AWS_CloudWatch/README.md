@@ -63,6 +63,7 @@
 * Collects, aggregates, and summarizes diagnostic information such as cold starts and Lambda worker shutdowns
 * Lambda Insights is provided as a Lambda Layer
 ### CloudWatch Contributor Insights
+![CloudWatch Contributor Insights](../Image/CloudWatch_Insight_Contributer.png)
 * Analyze log data and create time series that display contributor data.
   * See metrics about the top-N contributors
   * The total number of unique contributors, and their usage.
@@ -71,6 +72,13 @@
 * For example, you can find bad hosts, identify the heaviest network users, or find the URLs that generate the most errors.
 * You can build your rules from scratch, or you can also use sample rules that AWS has created – leverages your CloudWatch Logs
 * CloudWatch also provides built-in rules that you can use to analyze metrics from other AWS services.
+### CloudWatch Application Insights
+* Provides automated dashboards that show potential problems with monitored applications, to help isolate ongoing issues
+* Your applications run on Amazon EC2 Instances with select technologies only(Java, .NET, Microsoft IIS Web Server, databases…)
+* And you can use other AWS resources such as Amazon EBS, RDS, ELB, ASG, Lambda, SQS, DynamoDB, S3 bucket, ECS, EKS, SNS, API Gateway…
+* Powered by SageMaker
+* Enhanced visibility into your application health to reduce the time it will take you to troubleshoot and repair your applications
+* Findings and alerts are sent to Amazon EventBridge and SSM OpsCenter
 ### CloudWatch Logs – S3 Export
 ![CloudWatch Logs – S3 Export](../Image/CloudWatch_Log_S3.png)
 * Log data can take up to 12 hours to become available for export
