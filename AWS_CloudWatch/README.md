@@ -57,3 +57,11 @@
 * Get a real-time log events from CloudWatch Logs for processing and analysis
 * Send to Kinesis Data Streams, Kinesis Data Firehose, or Lambda
 * Subscription Filter – filter which logs are events delivered to your destination
+### CloudWatch Logs Aggregation Multi-Account & Multi Region
+![CloudWatch Logs Aggregation](../Image/CloudWatch_log_Aggregation.png)
+### CloudWatch Logs for EC2
+![CloudWatch Logs for EC2](../Image/)
+* By default, no logs from your EC2 machine will go to CloudWatch
+* You need to run a CloudWatch agent on EC2 to push the log files you want
+* Make sure IAM permissions are correct
+* The CloudWatch log agent can be setup on-premises too
