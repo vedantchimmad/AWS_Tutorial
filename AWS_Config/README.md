@@ -47,3 +47,14 @@
   * Record configuration changes
   * Evaluate resources against compliance rules
   * Get timeline of changes and compliance
+### For an Elastic Load Balancer
+* CloudWatch:
+  * Monitoring Incoming connections metric
+  * Visualize error codes as % over time
+  * Make a dashboard to get an idea of your load balancer performance
+* Config:
+  * Track security group rules for the Load Balancer
+  * Track configuration changes for the Load Balancer
+  * Ensure an SSL certificate is always assigned to the Load Balancer (compliance)
+* CloudTrail:
+  * Track who made any changes to the Load Balancer with API calls
