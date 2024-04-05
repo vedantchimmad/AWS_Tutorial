@@ -21,3 +21,10 @@
   * And / or: at regular time intervals
 * AWS Config Rules does not prevent actions from happening (no deny)
 * Pricing: no free tier, $0.003 per configuration item recorded per region, $0.001 per config rule evaluation per region
+### AWS Config Resource
+![AWS Config Resource](../Image/AWS_Config_Resource.png)
+Config Rules – Remediations
+* Automate remediation of non-compliant resources using SSM Automation Documents
+* Use AWS-Managed Automation Documents or create custom Automation Documents
+  * Tip: you can create custom Automation Documents that invokes Lambda function
+* You can set Remediation Retries if the resource is still non-compliant after autoremediation
