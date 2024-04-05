@@ -24,7 +24,7 @@
 ### AWS Config Resource
 ![AWS Config Resource](../Image/AWS_Config_Resource.png)
 ### Config Rules – Remediations
-
+![Config Remediations](../Image/Config_Remediations.png)
 * Automate remediation of non-compliant resources using SSM Automation Documents
 * Use AWS-Managed Automation Documents or create custom Automation Documents
   * Tip: you can create custom Automation Documents that invokes Lambda function
