@@ -29,3 +29,5 @@
 * Use AWS-Managed Automation Documents or create custom Automation Documents
   * Tip: you can create custom Automation Documents that invokes Lambda function
 * You can set Remediation Retries if the resource is still non-compliant after autoremediation
+### Config Rules – Notifications
+* Use EventBridge to trigger notifications when AWS resources are noncompliant
