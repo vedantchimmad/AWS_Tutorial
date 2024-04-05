@@ -34,3 +34,16 @@
 ![EventBridge Config notification](../Image/EventBridge_config_Notification.png)
 * Ability to send configuration changes and compliance state notifications to SNS (all events – use SNS Filtering or filter at client-side)
 ![Send Configuration changes Notification](../Image/Config_changes_Notification.png)
+### CloudWatch vs CloudTrail vs Config
+* CloudWatch
+  * Performance monitoring (metrics, CPU, network, etc…) & dashboards
+  * Events & Alerting
+  * Log Aggregation & Analysis
+* CloudTrail
+  * Record API calls made within your Account by everyone
+  * Can define trails for specific resources
+  * Global Service
+* Config
+  * Record configuration changes
+  * Evaluate resources against compliance rules
+  * Get timeline of changes and compliance
