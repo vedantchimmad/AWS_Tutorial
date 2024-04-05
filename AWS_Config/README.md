@@ -31,3 +31,6 @@
 * You can set Remediation Retries if the resource is still non-compliant after autoremediation
 ### Config Rules – Notifications
 * Use EventBridge to trigger notifications when AWS resources are noncompliant
+![EventBridge Config notification](../Image/EventBridge_config_Notification.png)
+* Ability to send configuration changes and compliance state notifications to SNS (all events – use SNS Filtering or filter at client-side)
+![Send Configuration changes Notification](../Image/Config_changes_Notification.png)
