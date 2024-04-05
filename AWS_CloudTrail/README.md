@@ -45,3 +45,5 @@
 * To keep events beyond this period, log them to S3 and use Athena
 ### Amazon EventBridge – Intercept API Calls
 ![Cloudtrail Intercept API calls](../Image/Cloudtrail_intercept_API_calls.png)
+### Amazon EventBridge + CloudTrail
+![EventBridge CloudTrail](../Image/CloudTrail_EventBridge.png)
