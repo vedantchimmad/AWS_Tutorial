@@ -40,6 +40,6 @@
   * Event is sent to Amazon S3
   * An EventBridge event is generated (for automation needs)
 ### CloudTrail Events Retention
-
+![CloudTrail_Retention](../Image/CloudTrail_Retention.png)
 * Events are stored for 90 days in CloudTrail
 * To keep events beyond this period, log them to S3 and use Athena
