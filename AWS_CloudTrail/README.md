@@ -28,6 +28,7 @@
 * CloudTrail Insights Events:
   * See next slide 
 ### CloudTrail Insights
+![CloudTrail Insights](../Image/CloudTrail_insights.png)
 * Enable CloudTrail Insights to detect unusual activity in your account:
   * inaccurate resource provisioning
   * hitting service limits
