@@ -27,3 +27,14 @@
   * AWS Lambda function execution activity (the Invoke API)
 * CloudTrail Insights Events:
   * See next slide 
+### CloudTrail Insights
+* Enable CloudTrail Insights to detect unusual activity in your account:
+  * inaccurate resource provisioning
+  * hitting service limits
+  * Bursts of AWS IAM actions
+  * Gaps in periodic maintenance activity
+* CloudTrail Insights analyzes normal management events to create a baseline
+* And then continuously analyzes write events to detect unusual patterns
+  * Anomalies appear in the CloudTrail console
+  * Event is sent to Amazon S3
+  * An EventBridge event is generated (for automation needs)
