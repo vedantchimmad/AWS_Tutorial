@@ -1,6 +1,7 @@
 # AWS CloudTrail
 
 ---
+![CloudTrail](../Image/AWS_Cloudtrail.png)
 * Provides governance, compliance and audit for your AWS Account
 * CloudTrail is enabled by default!
 * Get an history of events / API calls made within your AWS Account by:
