@@ -1,6 +1,7 @@
 # AWS Organizations
 
 ---
+![AWS Organizations](../Image/AWS_Organization.png)
 * Global service
 * Allows to manage multiple AWS accounts
 * The main account is the management account
