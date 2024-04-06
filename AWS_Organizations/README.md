@@ -24,4 +24,5 @@
 ### SCP Hierarchy
 ![SCP Hierarchy](../Image/SCP_Hierarchy.png)
 ### Resource Policies & aws:PrincipalOrgID
+![Organization Policies](../Image/Organization_policies.png)
 * aws:PrincipalOrgID can be used in any resource policies to restrict access to accounts that are member of an AWS Organization
