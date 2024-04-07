@@ -27,6 +27,14 @@
 ![Organization Policies](../Image/Organization_policies.png)
 * aws:PrincipalOrgID can be used in any resource policies to restrict access to accounts that are member of an AWS Organization
 ### IAM Roles vs Resource Based Policies
+![Organization Roles](../Image/Organization_Roles.png)
 * Cross account:
   * attaching a resource-based policy to a resource (example: S3 bucket policy)
   * OR using a role as a proxy
+  * When you assume a role (user, application or service), you give up your
+    original permissions and take the permissions assigned to the role
+  * When using a resource-based policy, the principal doesn’t have to give up his
+  permissions
+  * Example: User in account A needs to scan a DynamoDB table in Account A
+  and dump it in an S3 bucket in Account B.
+  * Supported by: Amazon S3 buckets, SNS topics, SQS queues, etc…
