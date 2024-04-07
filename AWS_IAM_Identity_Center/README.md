@@ -22,3 +22,9 @@
   * Fine-grained permissions based on users’ attributes stored in IAM Identity Center Identity Store
   * Example: cost center, title, locale, …
   * Use case: Define permissions once, then modify AWS access by changing the attributes
+### What is Microsoft Active Directory (AD)?
+* Found on any Windows Server with AD Domain Services
+* Database of objects: User Accounts, Computers, Printers, File Shares, Security Groups
+* Centralized security management, create account, assign permissions
+* Objects are organized in trees
+* A group of trees is a forest
