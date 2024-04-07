@@ -47,3 +47,7 @@
 ![IAM Boundaries](../Image/Organization_Boundaries.png)
 * IAM Permission Boundaries are supported for users and roles (not groups)
 * Advanced feature to use a managed policy to set the maximum permissions an IAM entity can get.
+#### Use cases
+* Delegate responsibilities to non administrators within their permission boundaries, for example create new IAM users
+* Allow developers to self-assign policies and manage their own permissions, while making sure they can’t “escalate” their privileges (= make themselves admin)
+* Useful to restrict one specific user(instead of a whole account using Organizations & SCP)
