@@ -1,6 +1,7 @@
 # AWS IAM Identity Center
 
 ---
+![AWS IAM Identity Center](../Image/AWS_IAM_Identity_Center_login.png)
 * One login (single sign-on) for all your
   * AWS accounts in AWS Organizations
   * Business cloud applications (e.g., Salesforce, Box, Microsoft 365, …)
