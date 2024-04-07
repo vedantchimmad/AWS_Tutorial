@@ -26,3 +26,7 @@
 ### Resource Policies & aws:PrincipalOrgID
 ![Organization Policies](../Image/Organization_policies.png)
 * aws:PrincipalOrgID can be used in any resource policies to restrict access to accounts that are member of an AWS Organization
+### IAM Roles vs Resource Based Policies
+* Cross account:
+  * attaching a resource-based policy to a resource (example: S3 bucket policy)
+  * OR using a role as a proxy
