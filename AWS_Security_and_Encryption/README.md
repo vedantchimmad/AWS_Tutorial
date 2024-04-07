@@ -8,6 +8,7 @@
 * TLS certificates help with encryption (HTTPS)
 * Encryption in flight ensures no MITM (man in the middle attack) can happen
 ### Server-side encryption at rest
+![Server side Encryption](../Image/Server_side_encryption.png)
 * Data is encrypted after being received by the server
 * Data is decrypted before being sent
 * It is stored in an encrypted form thanks to a key (usually a data key)
