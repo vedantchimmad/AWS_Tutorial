@@ -44,5 +44,6 @@
 * Resource-based policy: Lambda, SNS, SQS, CloudWatch Logs, API Gateway…
 * IAM role: Kinesis stream, Systems Manager Run Command, ECS task…
 ### IAM Permission Boundaries
+![IAM Boundaries](../Image/Organization_Boundaries.png)
 * IAM Permission Boundaries are supported for users and roles (not groups)
 * Advanced feature to use a managed policy to set the maximum permissions an IAM entity can get.
