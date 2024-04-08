@@ -45,7 +45,7 @@
   * Define who can administer the key
   * Useful for cross-account access of your KMS key
 ### Copying Snapshots across accounts
-
+![Copying Snapshots across accounts](../Image/Copying_Snapshots_across_accounts.png)
 1. Create a Snapshot, encrypted with your own KMS Key (Customer Managed Key)
 2. Attach a KMS Key Policy to authorize cross-account access
 3. Share the encrypted snapshot
