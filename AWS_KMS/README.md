@@ -32,3 +32,5 @@
   * AWS-managed KMS Key: automatic every 1 year
   * Customer-managed KMS Key: (must be enabled) automatic every 1 year
   * Imported KMS Key: only manual rotation possible using alias
+### Copying Snapshots across regions
+![Copying Snapshots across regions](../Image/Copying_Snapshots_across_regions.png)
