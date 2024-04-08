@@ -34,3 +34,13 @@
   * Imported KMS Key: only manual rotation possible using alias
 ### Copying Snapshots across regions
 ![Copying Snapshots across regions](../Image/Copying_Snapshots_across_regions.png)
+### KMS Key Policies
+* Control access to KMS keys, “similar” to S3 bucket policies
+* Difference: you cannot control access without them
+* Default KMS Key Policy:
+  * Created if you don’t provide a specific KMS Key Policy
+  * Complete access to the key to the root user = entire AWS account
+* Custom KMS Key Policy:
+  * Define users, roles that can access the KMS key
+  * Define who can administer the key
+  * Useful for cross-account access of your KMS key
