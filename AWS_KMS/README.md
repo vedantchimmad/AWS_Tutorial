@@ -51,3 +51,11 @@
 3. Share the encrypted snapshot
 4. (in target) Create a copy of the Snapshot, encrypt it with a CMK in your account
 5. Create a volume from the snapshot
+### KMS Multi-Region Keys
+* Identical KMS keys in different AWS Regions that can be used interchangeably
+* Multi-Region keys have the same key ID, key material, automatic rotation…
+* Encrypt in one Region and decrypt in other Regions
+* No need to re-encrypt or making cross-Region API calls
+* KMS Multi-Region are NOT global (Primary + Replicas)
+* Each Multi-Region key is managed independently
+* Use cases: global client-side encryption, encryption on Global DynamoDB, Global Aurora
