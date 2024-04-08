@@ -52,6 +52,7 @@
 4. (in target) Create a copy of the Snapshot, encrypt it with a CMK in your account
 5. Create a volume from the snapshot
 ### KMS Multi-Region Keys
+![KMS Multi-Region Keys](../Image/KMS_Multi_Region_keys.png)
 * Identical KMS keys in different AWS Regions that can be used interchangeably
 * Multi-Region keys have the same key ID, key material, automatic rotation…
 * Encrypt in one Region and decrypt in other Regions
