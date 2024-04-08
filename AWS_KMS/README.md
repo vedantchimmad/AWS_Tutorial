@@ -44,3 +44,10 @@
   * Define users, roles that can access the KMS key
   * Define who can administer the key
   * Useful for cross-account access of your KMS key
+### Copying Snapshots across accounts
+
+1. Create a Snapshot, encrypted with your own KMS Key (Customer Managed Key)
+2. Attach a KMS Key Policy to authorize cross-account access
+3. Share the encrypted snapshot
+4. (in target) Create a copy of the Snapshot, encrypt it with a CMK in your account
+5. Create a volume from the snapshot
