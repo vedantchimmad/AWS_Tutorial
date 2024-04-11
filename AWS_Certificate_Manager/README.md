@@ -33,3 +33,14 @@
 * Events are appearing in EventBridge
 * AWS Config has a managed rule named acm-certificate-expiration-check to check for expiring certificates(configurable number of days)
 ### ACM – Integration with ALB Auto
+![ACM Integration with ALB](../Image/ACM_Integration_with_ALB.png)
+### API Gateway - Endpoint Types
+* Edge-Optimized (default): For global clients
+  * Requests are routed through the CloudFront Edge locations (improves latency)
+  * The API Gateway still lives in only one region
+* Regional:
+  * For clients within the same region
+  * Could manually combine with CloudFront (more control over the caching strategies and the distribution)
+* Private:
+  * Can only be accessed from your VPC using an interface VPC endpoint (ENI)
+  * Use a resource policy to define access
