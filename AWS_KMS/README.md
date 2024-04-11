@@ -60,3 +60,31 @@
 * KMS Multi-Region are NOT global (Primary + Replicas)
 * Each Multi-Region key is managed independently
 * Use cases: global client-side encryption, encryption on Global DynamoDB, Global Aurora
+### DynamoDB Global Tables and KMS Multi-Region Keys Client-Side encryption
+![DyanamoDB KMS Global Tables](../Image/KMS_DynamoDB_Gloabal.png)
+* We can encrypt specific attributes client-side in our DynamoDB table using the Amazon DynamoDB Encryption Client
+* Combined with Global Tables, the client-side encrypted data is replicated to other regions
+* If we use a multi-region key, replicated in the same region as the DynamoDB Global table, then clients in these regions can use lowlatency API calls to KMS in their region to decrypt the data client-side
+* Using client-side encryption we can protect specific fields and guarantee only decryption if the client has access to an API key
+### Global Aurora and KMS Multi-Region Keys Client-Side encryption
+![Aurora Global KMS](../Image/Aurora_Gloabal_KMS.png)
+* We can encrypt specific attributes client-side in our Aurora table using the AWS Encryption SDK
+* Combined with Aurora Global Tables, the client-side encrypted data is replicated to other regions
+* If we use a multi-region key, replicated in the same region as the Global Aurora DB, then clients in these regions can use low-latency API calls to KMS in their region to decrypt the data client-side
+* Using client-side encryption we can protect specific fields and guarantee only decryption if the client has access to an API key, we can protect specific fields even from database admins
+### S3 Replication Encryption Considerations
+* Unencrypted objects and objects encrypted with SSE-S3 are replicated by default
+* Objects encrypted with SSE-C (customer provided key) can be replicated
+* For objects encrypted with SSE-KMS, you need to enable the option
+  * Specify which KMS Key to encrypt the objects within the target bucket
+  * Adapt the KMS Key Policy for the target key
+  * An IAM Role with kms:Decrypt for the source KMS Key and kms:Encrypt for the target KMS Key
+  * You might get KMS throttling errors, in which case you can ask for a Service Quotas increase
+* You can use multi-region AWS KMS Keys, but they are currently treated as independent keys by Amazon S3 (the object will still be decrypted and then encrypted)
+### AMI Sharing Process Encrypted via KMS
+![AMI Sharing process](../Image/AMI_Sharing_Process.png)
+1. AMI in Source Account is encrypted with KMS Key from Source Account
+2. Must modify the image attribute to add a Launch Permission which corresponds to the specified target AWS account
+3. Must share the KMS Keys used to encrypted the snapshot the AMI references with the target account / IAM Role
+4. The IAM Role/User in the target account must have the permissions to DescribeKey, ReEncrypted, CreateGrant, Decrypt
+5. When launching an EC2 instance from the AMI, optionally the target account can specify a new KMS key in its own account to re-encrypt the volumes
