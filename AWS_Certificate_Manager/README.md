@@ -44,3 +44,15 @@
 * Private:
   * Can only be accessed from your VPC using an interface VPC endpoint (ENI)
   * Use a resource policy to define access
+### ACM – Integration with API Gateway
+![ACM Integration with API](../Image/ACM_Integration_API.png)
+* Create a Custom Domain Name in API Gateway
+* Edge-Optimized (default): For global clients
+  * Requests are routed through the CloudFront Edge locations(improves latency)
+  * The API Gateway still lives in only one region
+  * The TLS Certificate must be in the same region as CloudFront, in us-east-1
+  * Then setup CNAME or (better) A-Alias record in Route 53
+* Regional:
+  * For clients within the same region
+  * The TLS Certificate must be imported on API Gateway, in the same region as the API Stage
+  * Then setup CNAME or (better) A-Alias record in Route 53
