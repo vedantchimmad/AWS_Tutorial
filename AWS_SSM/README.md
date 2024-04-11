@@ -23,3 +23,5 @@
 * /other-department/
 * /aws/reference/secretsmanager/secret_ID_in_Secrets_Manager
 * /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 (public)
+### Standard and advanced parameter tiers
+![Standard and advanced parameter](../Image/STandard_and_Adavanced_parameter.png)
