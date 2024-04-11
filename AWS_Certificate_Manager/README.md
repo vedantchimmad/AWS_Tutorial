@@ -24,3 +24,10 @@
 3. It will take a few hours to get verified
 4. The Public Certificate will be enrolled for automatic renewal
    * ACM automatically renews ACM-generated certificates 60 days before expiry
+### ACM Importing public certificate ACM – Importing Public Certificates
+* Option to generate the certificate outside of ACM and then import it
+* No automatic renewal, must import a new certificate before expiry
+* ACM sends daily expiration events starting 45 days prior to expiration
+* The # of days can be configured
+* Events are appearing in EventBridge
+* AWS Config has a managed rule named acm-certificate-expiration-check to check for expiring certificates(configurable number of days)
