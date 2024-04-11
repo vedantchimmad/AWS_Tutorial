@@ -25,3 +25,7 @@
 * /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 (public)
 ### Standard and advanced parameter tiers
 ![Standard and advanced parameter](../Image/STandard_and_Adavanced_parameter.png)
+### Parameters Policies (for advanced parameters)
+![SSM Policies](../Image/SSM_Policies.png)
+* Allow to assign a TTL to a parameter (expiration date) to force updating or deleting sensitive data such as passwords
+* Can assign multiple policies at a time
