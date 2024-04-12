@@ -36,3 +36,16 @@
   * 24/7 access to AWS DDoS response team (DRP)
   * Protect against higher fees during usage spikes due to DDoS
   * Shield Advanced automatic application layer DDoS mitigation automatically creates, evaluates and deploys AWS WAF rules to mitigate layer 7 attacks
+# AWS Firewall Manager
+
+---
+### AWS Firewall Manager
+* Manage rules in all accounts of an AWS Organization
+* Security policy: common set of security rules
+  * WAF rules (Application Load Balancer, API Gateways, CloudFront)
+  * AWS Shield Advanced (ALB, CLB, NLB, Elastic IP, CloudFront)
+  * Security Groups for EC2, Application Load BAlancer and ENI resources in VPC
+  * AWS Network Firewall (VPC Level)
+  * Amazon Route 53 Resolver DNS Firewall
+  * Policies are created at the region level
+* Rules are applied to new resources as they are created (good for compliance) across all and future accounts in your Organization
