@@ -114,7 +114,7 @@
 
 ---
 ### AWS Macie
-![AWS Macie]
+![AWS Macie](../Image/AWS_Machie.png)
 * Amazon Macie is a fully managed data security and data privacy service
 that uses machine learning and pattern matching to discover and
 protect your sensitive data in AWS.
