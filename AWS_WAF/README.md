@@ -49,3 +49,39 @@
   * Amazon Route 53 Resolver DNS Firewall
   * Policies are created at the region level
 * Rules are applied to new resources as they are created (good for compliance) across all and future accounts in your Organization
+### WAF vs. Firewall Manager vs. Shield
+* WAF, Shield and Firewall Manager are used together for comprehensive protection
+* Define your Web ACL rules in WAF
+* For granular protection of your resources, WAF alone is the correct choice
+* If you want to use AWS WAF across accounts, accelerate WAF configuration, automate the protection of new resources, use Firewall Manager with AWS WAF
+* Shield Advanced adds additional features on top of AWS WAF, such as dedicated support from the Shield Response Team (SRT) and advanced reporting.
+* If you’re prone to frequent DDoS attacks, consider purchasing Shield Advanced
+### AWS Best Practices for DDoS Resiliency Edge Location Mitigation (BP1, BP3)
+* BP1 – CloudFront
+  * Web Application delivery at the edge
+  * Protect from DDoS Common Attacks (SYN floods, UDP reflection…)
+* BP1 – Global Accelerator
+  * Access your application from the edge
+  * Integration with Shield for DDoS protection
+  * Helpful if your backend is not compatible with CloudFront
+* BP3 – Route 53
+  * Domain Name Resolution at the edge
+  * DDoS Protection mechanism
+
+# Amazon GuardDuty
+
+---
+### Amazon GuardDuty
+* Intelligent Threat discovery to protect your AWS Account
+* Uses Machine Learning algorithms, anomaly detection, 3rd party data
+* One click to enable (30 days trial), no need to install software
+* Input data includes:
+  * CloudTrail Events Logs – unusual API calls, unauthorized deployments
+    * CloudTrail Management Events – create VPC subnet, create trail, …
+    * CloudTrail S3 Data Events – get object, list objects, delete object, …
+  * VPC Flow Logs – unusual internal traffic, unusual IP address
+  * DNS Logs – compromised EC2 instances sending encoded data within DNS queries
+  * Optional Features – EKS Audit Logs, RDS & Aurora, EBS, Lambda, S3 Data Events…
+* Can setup EventBridge rules to be notified in case of findings
+* EventBridge rules can target AWS Lambda or SNS
+* Can protect against CryptoCurrency attacks (has a dedicated “finding” for it)
