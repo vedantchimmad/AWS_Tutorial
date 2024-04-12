@@ -72,6 +72,7 @@
 
 ---
 ### Amazon GuardDuty
+![Amazon GuardDuty](../Image/AWS_GuardDuty.png)
 * Intelligent Threat discovery to protect your AWS Account
 * Uses Machine Learning algorithms, anomaly detection, 3rd party data
 * One click to enable (30 days trial), no need to install software
