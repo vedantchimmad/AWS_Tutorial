@@ -86,3 +86,20 @@
 * Can setup EventBridge rules to be notified in case of findings
 * EventBridge rules can target AWS Lambda or SNS
 * Can protect against CryptoCurrency attacks (has a dedicated “finding” for it)
+# Amazon Inspector
+
+---
+### Amazon Inspector
+![Amazon Inspector]
+* Automated Security Assessments
+* For EC2 instances
+  * Leveraging the AWS System Manager (SSM) agent
+  * Analyze against unintended network accessibility
+  * Analyze the running OS against known vulnerabilities
+* For Container Images push to Amazon ECR
+  * Assessment of Container Images as they are pushed
+* For Lambda Functions
+  * Identifies software vulnerabilities in function code and package dependencies
+  * Assessment of functions as they are deployed
+* Reporting & integration with AWS Security Hub
+* Send findings to Amazon Event Bridge
