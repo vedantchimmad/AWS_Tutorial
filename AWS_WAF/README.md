@@ -90,7 +90,7 @@
 
 ---
 ### Amazon Inspector
-![Amazon Inspector]
+![Amazon Inspector](../Image/AWS_Inspector.png)
 * Automated Security Assessments
 * For EC2 instances
   * Leveraging the AWS System Manager (SSM) agent
