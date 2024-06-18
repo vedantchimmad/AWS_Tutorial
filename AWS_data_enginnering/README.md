@@ -66,3 +66,16 @@ S3 offers several storage classes:
    * SSE-C (where you manage the encryption keys).
 - Client-Side Encryption: Your data is encrypted on the client side before uploading it to
   S3.
+### 9) Explain the difference between a security group and a network access control list
+In the context of AWS, a security group and a network access control list (ACL) are both used to control the traffic flow in and out of your virtual private cloud (VPC), but they operate at different networking layers and have distinct functionalities.
+
+| Security Group                                                                                                                    | Network Access Control List (NACL)                                                                                                                    |
+|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Operates at the instance level                                                                                                    | Operates at the subnet level within a VPC                                                                                                             |
+| Acts as a virtual firewall for one or more instances.                                                                             | Acts as a firewall for controlling traffic entering or leaving one or more subnets.                                                                   |
+| Controls traffic based on security group rules that specify allowed inbound and outbound traffic                                  | ontrols traffic based on numbered ACL entries, each specifying whether to allow or deny specific types of traffic from specific sources/destinations. |
+| Stateful: If you allow inbound traffic, responses to that traffic are automatically allowed back out regardless of outbound rules | Stateless: You must define both inbound and outbound rules separately;                                                                                |
+| Supports allow rules only                                                                                                         | Supports both allow and deny rules                                                                                                                    |
+
+### 10)What is an Internet Gateway, and why is it used
+An Internet Gateway (IGW) is a VPC component that allows communication between instances in your VPC and the internet
